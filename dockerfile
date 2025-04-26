@@ -1,17 +1,18 @@
-# Use official python image
+# Use Python official image as base
 FROM python:3.11-slim
 
-# Set working directory
+# Set working directory inside the container
 WORKDIR /app
 
-# Copy all files
-COPY . .
+# Copy requirements file and install dependencies
+COPY requirements.txt /app/
+RUN pip install -r requirements.txt
 
-# Install dependencies
-RUN pip install --no-cache-dir django
+# Copy the rest of your project files to /app (make sure manage.py is copied too)
+COPY . /app/
 
-# Expose port
+# Expose port 8000 for the Django development server
 EXPOSE 8000
 
-# Run server
+# Command to run the application
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
