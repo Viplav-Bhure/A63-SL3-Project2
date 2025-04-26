@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Project - App 2 Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fef2f2;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #dc2626;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 40px;
+            text-align: center;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #dc2626;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #ffe4e6;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>App 2 - Sample Page</h1>
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'page' %}">App 2 Page</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Welcome to App 2</h2>
+    <p>This page is part of the second Django app in the StudentProject!</p>
+    <button onclick="alert('Thanks for visiting!')">Click Me!</button>
+</main>
+
+<footer>
+    <p>Student Project - App 2</p>
+</footer>
+
+</body>
+</html>
